@@ -5,3 +5,6 @@
 .svn
 local_settings.py
 nohup.out
+/.settings/
+.project
+.pydevproject

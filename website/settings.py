@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '28ta%!1(r3z17!xq4nh6-5!u_s-v37z!f#0!zt)jy61zwp4)a9'
+SECRET_KEY = '28ta%!1(d*jdkexq4nh6-5!u_s-v37z!f#0!zt)jy61kse4)a9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -28,9 +28,8 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
 INSTALLED_APPS = (
-    #'django.contrib.admin',
+    # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -55,26 +54,22 @@ WSGI_APPLICATION = 'website.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
-if 'SERVER_SOFTWARE' in os.environ:
-    from sae.const import (
-        MYSQL_HOST, MYSQL_PORT, MYSQL_USER, MYSQL_PASS, MYSQL_DB)
-else:
-    MYSQL_HOST = 'localhost'
-    MYSQL_PORT = '3306'
-    MYSQL_USER = 'root'
-    MYSQL_PASS = ''
-    MYSQL_DB = 'accounts'
+MYSQL_HOST = 'localhost'
+MYSQL_PORT = '3306'
+MYSQL_USER = 'root'
+MYSQL_PASS = 'root'
+MYSQL_DB = 'accounts'
 
 DATABASES = {
     'default': {
-        #'ENGINE': 'django.db.backends.sqlite3',
-        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'ENGINE' : 'django.db.backends.mysql',
-        'NAME' : MYSQL_DB,
-        'USER' : MYSQL_USER,
-        'PASSWORD' : MYSQL_PASS,
-        'HOST' : MYSQL_HOST,
-        'PORT' : MYSQL_PORT,
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': MYSQL_DB,
+        'USER': MYSQL_USER,
+        'PASSWORD': MYSQL_PASS,
+        'HOST': MYSQL_HOST,
+        'PORT': MYSQL_PORT,
     }
 }
 
@@ -86,11 +81,8 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
@@ -99,12 +91,12 @@ AUTH_USER_MODEL = 'UserManage.User'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR,'static'),
+    os.path.join(BASE_DIR, 'static'),
 )
 
-#set TEMPLATE_DIRS
+# set TEMPLATE_DIRS
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
-#TEMPLATE zh_CN
-FILE_CHARSET='utf-8'
-DEFAULT_CHARSET='utf-8'
+# TEMPLATE zh_CN
+FILE_CHARSET = 'utf-8'
+DEFAULT_CHARSET = 'utf-8'

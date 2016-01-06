@@ -23,8 +23,10 @@ def start():
 #
 #             "%s manage.py %s" % (ipython, "makemigrations"),
 #             "%s manage.py %s" % (ipython, "migrate"),
+#             "%s manage.py %s" % (ipython, "makemessages -l zh-Hans"),
 
-            "%s manage.py %s" % (ipython, "runserver 0.0.0.0:8000"),
+
+             "%s manage.py %s" % (ipython, "runserver 0.0.0.0:8000"),
             ]
 
     subprocess.Popen(cmds[0], shell=True)

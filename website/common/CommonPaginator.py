@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def SelfPaginator(request, List, Limit):

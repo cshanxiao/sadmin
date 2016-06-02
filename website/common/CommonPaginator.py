@@ -3,7 +3,7 @@
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def SelfPaginator(request, List, Limit):
-    '''分页模块,用法:
+    u'''分页模块,用法:
         1.view中引入：
         ex:from website.common.CommonPaginator import SelfPaginator
 

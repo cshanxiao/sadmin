@@ -88,8 +88,8 @@ def ListPermission(request):
     lst = SelfPaginator(request, mList, 20)
 
     kwvars = {
-        'lPage':lst,
-        'request':request,
+        'lPage': lst,
+        'request': request,
     }
 
     return render_to_response('UserManage/permission.list.html', kwvars,

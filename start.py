@@ -8,7 +8,7 @@ u'''
 import subprocess
 
 def start():
-    ipython = "python27"
+    ipython = "python"
     cmds = [
 #             "django-admin startproject xxx",
 #             "%s manage.py %s" % (ipython, "startapp docker"),
